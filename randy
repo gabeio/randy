@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+import random
+import sys
+import os
+
+abc="""abcdefghijklmnopqrstuvwxyz"""
+num="""1234567890"""
+caps="""ABCDEFGHIJKLMNOPQRSTUVWXYZ"""
+alpha=abc+num+caps
+output=""
+
+def randy(i):
+    global output
+    while i > 0:
+        output+=random.sample(alpha,1)[0]
+        i=i-1
+    return output
+
+try:
+    print randy(int(sys.argv[1]))
+except Exception,e:
+    print """usage: rand.py <random length here>"""
