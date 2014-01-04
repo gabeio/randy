@@ -19,4 +19,4 @@ def randy(i):
 try:
     print randy(int(sys.argv[1]))
 except Exception,e:
-    print """usage: rand.py <random length here>"""
+    print """usage: randy <random length here>"""
