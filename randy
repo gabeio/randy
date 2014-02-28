@@ -12,11 +12,10 @@ output=""
 def randy(i):
     global output
     while i > 0:
-        output+=random.sample(alpha,1)[0]
+        sys.stdout.write(random.sample(alpha,1)[0])
         i=i-1
-    return output
 
 try:
-    print randy(int(sys.argv[1]))
+    randy(int(sys.argv[1]))
 except Exception,e:
     print """usage: randy <random length here>"""
